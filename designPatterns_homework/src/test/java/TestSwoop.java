@@ -15,8 +15,7 @@ public class TestSwoop {
     WebDriver driver;
 
     @BeforeTest
-    public void setup()
-    {
+    public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().
@@ -24,9 +23,9 @@ public class TestSwoop {
                 implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
+
     @Test
-    public void test()
-    {
+    public void test() {
         MainPage mainPage = new MainPage(driver);
 
         mainPage.movieButton
@@ -52,9 +51,9 @@ public class TestSwoop {
         chooseSeatPopUp popUp = new chooseSeatPopUp(driver);
         popUp.chooseVacantPlace();
     }
+
     @AfterTest
-    public void endTest()
-    {
+    public void endTest() {
         driver.quit();
     }
 }

@@ -13,19 +13,19 @@ public class moviePage {
     public WebElement firstMovieCard;
     @FindBy(xpath = "(//p[contains(text(),'ყიდვა')])")
     public WebElement buyButton;
+
     public moviePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public moviePage moveToFirstMovie()
-    {
+    public moviePage moveToFirstMovie() {
         Actions actions = new Actions(driver);
         actions.moveToElement(firstMovieCard).perform();
         return this;
     }
-    public moviePage clickOnBuyFirstMovie()
-    {
+
+    public moviePage clickOnBuyFirstMovie() {
         buyButton.click();
         return this;
     }
