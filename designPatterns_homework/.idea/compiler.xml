@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="INSERT-TASK-HERE" />
+        <module name="designPatterns_homework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="designPatterns_homework" target="19" />
+      <module name="INSERT-TASK-HERE" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
