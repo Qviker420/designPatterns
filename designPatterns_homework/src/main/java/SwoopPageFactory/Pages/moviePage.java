@@ -1,5 +1,6 @@
 package SwoopPageFactory.Pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,12 +20,14 @@ public class moviePage {
         PageFactory.initElements(driver, this);
     }
 
+    @Step
     public moviePage moveToFirstMovie() {
         Actions actions = new Actions(driver);
         actions.moveToElement(firstMovieCard).perform();
         return this;
     }
 
+    @Step
     public moviePage clickOnBuyFirstMovie() {
         buyButton.click();
         return this;
